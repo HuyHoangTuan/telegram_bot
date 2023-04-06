@@ -1,0 +1,26 @@
+{
+	"name": "telegram_bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "test",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/HuyHoangTuan/telegram_bot.git"
+	},
+	"author": "Fankychop",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/HuyHoangTuan/telegram_bot/issues"
+	},
+	"homepage": "https://github.com/HuyHoangTuan/telegram_bot#readme",
+	"dependencies": {
+		"esm": "^3.2.25",
+		"google-spreadsheet": "^3.3.0",
+		"node-telegram-bot-api": "^0.61.0"
+	}
+}
