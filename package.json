@@ -19,6 +19,7 @@
 	},
 	"homepage": "https://github.com/HuyHoangTuan/telegram_bot#readme",
 	"dependencies": {
+		"dotenv": "^16.0.3",
 		"esm": "^3.2.25",
 		"google-spreadsheet": "^3.3.0",
 		"node-telegram-bot-api": "^0.61.0"

@@ -1,8 +1,4 @@
-// ------------- BEGIN_IMPORT -------------
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-import credentials from '../../config/GoogleCredentials.json' assert {type: 'json'};
-// ------------- END_IMPORT -------------
-
 
 export async function readSheet(sheetID)
 {
@@ -10,13 +6,16 @@ export async function readSheet(sheetID)
 
     try
     {
-        await document.useServiceAccountAuth(credentials);
-        
+        await document.useServiceAccountAuth(JSON.parse(process.env.GOOGLE_CREDENTIALS));
+        await document.updateProperties({
+            autoRecalc: "ON_CHANGE"
+        });
+        await document.loadInfo();
         return document;
     }
     catch(error)
     {
-        console.log(`Failed to read sheet: ${error.json()}`)
+        console.log(error);
+        return null;
     }
-    return null
 }
